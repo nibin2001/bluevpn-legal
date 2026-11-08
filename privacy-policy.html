@@ -1,426 +1,199 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Blue VPN Pro</title>
-    <meta name="description" content="Official Privacy Policy and Zero-Logs Architecture Commitment for Blue VPN Pro Android Application and Global Server Network.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --primary-light: #3b82f6;
-            --accent: #06b6d4;
-            --bg-dark: #0f172a;
-            --card-bg: #1e293b;
-            --card-border: #334155;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --badge-bg: rgba(37, 99, 235, 0.15);
-            --badge-border: rgba(59, 130, 246, 0.3);
-            --badge-text: #60a5fa;
-            --green: #10b981;
-            --green-bg: rgba(16, 185, 129, 0.12);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.7;
-            padding: 0;
-            margin: 0;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        header {
-            background: linear-gradient(135deg, #0b132b 0%, #1c2541 50%, #0f172a 100%);
-            border-bottom: 1px solid var(--card-border);
-            padding: 2.5rem 1.5rem 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, rgba(0,0,0,0) 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .header-container {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-
-        .brand-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .brand-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #2563eb, #06b6d4);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
-        }
-
-        .brand-icon svg {
-            width: 28px;
-            height: 28px;
-            fill: #ffffff;
-        }
-
-        .brand-title {
-            font-size: 1.6rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: #ffffff;
-        }
-
-        .brand-subtitle {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 0.75rem;
-        }
-
-        .nav-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-
-        .nav-btn.active {
-            background: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        }
-
-        .nav-btn.secondary {
-            background: rgba(255, 255, 255, 0.06);
-            color: var(--text-muted);
-            border: 1px solid var(--card-border);
-        }
-
-        .nav-btn.secondary:hover {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2.5rem auto;
-            padding: 0 1.5rem 4rem;
-        }
-
-        .meta-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .badge-verified {
-            background: var(--green-bg);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            color: var(--green);
-            padding: 0.35rem 0.85rem;
-            border-radius: 9999px;
-            font-size: 0.825rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .badge-verified::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background-color: var(--green);
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .meta-text {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
-
-        .content-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.03em;
-            color: #ffffff;
-        }
-
-        h2 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-top: 2.2rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding-bottom: 0.5rem;
-        }
-
-        h3 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--badge-text);
-            margin-top: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            color: #cbd5e1;
-            margin-bottom: 1.2rem;
-            font-size: 0.975rem;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 1.5rem;
-        }
-
-        ul li {
-            position: relative;
-            padding-left: 1.75rem;
-            margin-bottom: 0.75rem;
-            color: #cbd5e1;
-            font-size: 0.975rem;
-        }
-
-        ul li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--accent);
-            font-weight: 800;
-        }
-
-        .highlight-box {
-            background: rgba(37, 99, 235, 0.08);
-            border-left: 4px solid var(--primary);
-            border-radius: 0 10px 10px 0;
-            padding: 1.25rem 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .highlight-box p {
-            margin: 0;
-            color: #e2e8f0;
-            font-weight: 500;
-        }
-
-        .contact-box {
-            background: #131d31;
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .contact-box a {
-            color: var(--badge-text);
-            text-decoration: none;
-        }
-
-        .contact-box a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--card-border);
-            background: #090e1a;
-        }
-
-        @media (max-width: 640px) {
-            .content-card {
-                padding: 1.5rem;
-            }
-            h1 {
-                font-size: 1.75rem;
-            }
-            .header-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blue VPN Pro Privacy Policy</title>
+  <meta name="description" content="What Blue VPN Pro collects, what it never logs, and how long data is kept.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-    <div class="header-container">
-        <div class="brand-wrapper">
-            <div class="brand-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/>
-                </svg>
-            </div>
-            <div>
-                <div class="brand-title">Blue VPN Pro</div>
-                <div class="brand-subtitle">Legal & Privacy Center</div>
-            </div>
-        </div>
-        <nav class="nav-links">
-            <a href="privacy-policy.html" class="nav-btn active">Privacy Policy</a>
-            <a href="terms.html" class="nav-btn secondary">Terms of Service</a>
-        </nav>
-    </div>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 4 7v8c0 7.4 5.1 13.6 12 15 6.9-1.4 12-7.6 12-15V7z" fill="#1d4ed8"/><path d="m11 16 3.5 3.5L21.5 12" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Blue VPN Pro
+    </a>
+    <nav class="site-nav" aria-label="Legal">
+      <a href="privacy-policy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
 </header>
 
-<main>
-    <div class="meta-card">
-        <div>
-            <div class="meta-text">Application: <strong>Blue VPN Pro (Android)</strong></div>
-            <div class="meta-text">Last Updated: <strong>October 4, 2026</strong></div>
-        </div>
-        <div class="badge-verified">Verifiable Zero-Logs Guarantee</div>
+<div class="page">
+  <nav class="toc" aria-label="On this page">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#no-logs">No-logs commitment</a></li>
+      <li><a href="#collect">Data we process</a></li>
+      <li><a href="#device">Data on your device</a></li>
+      <li><a href="#vpnservice">Use of VpnService</a></li>
+      <li><a href="#sharing">Service providers</a></li>
+      <li><a href="#legal-bases">Legal bases</a></li>
+      <li><a href="#transfers">International transfers</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#retention">Retention</a></li>
+      <li><a href="#rights">Your rights &amp; deletion</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <p class="eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective November 8, 2026</p>
+
+    <p class="lead">Blue VPN Pro (“we”, “us”) provides a WireGuard®-based VPN app for Android. This policy explains what the app and our servers process, why, and for how long. We built the service to need as little information as possible.</p>
+
+    <div class="glance">
+      <div class="never">
+        <h3>We never log</h3>
+        <ul>
+          <li>Websites you visit or apps you use</li>
+          <li>The content of your traffic</li>
+          <li>Your DNS queries</li>
+          <li>Connection history or bandwidth use</li>
+        </ul>
+      </div>
+      <div>
+        <h3>We do process</h3>
+        <ul>
+          <li>A random account ID (no name or email)</li>
+          <li>Your Google Play subscription status</li>
+          <li>Device model and last-active time</li>
+          <li>Temporary session data while connected</li>
+        </ul>
+      </div>
     </div>
 
-    <article class="content-card">
-        <h1>Privacy Policy</h1>
-        <p>
-            <strong>Blue VPN Pro</strong> ("we", "us", or "our"), engineered and operated by the <strong>Blue VPN Security & Engineering Team</strong>, is dedicated to safeguarding user privacy, network security, and digital freedom. This Privacy Policy outlines our transparent data handling and no-logs practices across the Blue VPN Pro Android application and our global encrypted server infrastructure.
-        </p>
+    <h2 id="no-logs">1. No-logs commitment</h2>
+    <p>When your traffic passes through a Blue VPN Pro server, we do <strong>not</strong> record:</p>
+    <ul>
+      <li>the websites, services or apps you use, or the content of your traffic;</li>
+      <li>the destination IP addresses you connect to, or your DNS queries;</li>
+      <li>your originating IP address together with your VPN activity;</li>
+      <li>a history of your connections, session times or the amount of data you transfer.</li>
+    </ul>
+    <p>Our account server runs with request logging turned off, and the HTTPS proxy in front of it has access logging disabled. While you are connected, the VPN server necessarily holds your current IP address in memory so that it can send traffic back to you. It is discarded when your session ends and is never written to a log.</p>
 
-        <div class="highlight-box">
-            <p><strong>Core Zero-Logs Principle:</strong> We do not log, track, monitor, or store your internet activity, browsing history, destination URLs, source IP addresses, connection timestamps, or DNS queries. What you do online stays entirely private.</p>
-        </div>
+    <h2 id="collect">2. Data we process</h2>
+    <p>To run a paid service, we keep a small amount of account and device information. None of it is linked to what you do online.</p>
 
-        <h2>1. Strict Zero-Logs Architecture</h2>
-        <p>Our server daemons execute strictly in volatile physical RAM buffers with persistent disk logging completely disabled:</p>
-        <ul>
-            <li><strong>NO Browsing History:</strong> We never record, inspect, or intercept the websites you access or data packets transmitted.</li>
-            <li><strong>NO Originating IP Logging:</strong> We do not store your real-world IP address before, during, or after VPN sessions.</li>
-            <li><strong>NO Timestamps:</strong> We do not record connection timestamps, session durations, or session start/stop events.</li>
-            <li><strong>NO DNS Logging:</strong> All DNS lookups are routed through private local encrypted resolvers (1.1.1.1 / 1.0.0.1) and immediately discarded.</li>
-            <li><strong>NO Bandwidth Profiling:</strong> We do not build user behavioral profiles or throttle connections based on traffic type.</li>
-        </ul>
+    <h3>Account and subscription</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Data</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Random account ID (for example “BVP-1234567”) and a secret access token</td><td>Identify your subscription without using your name, email or phone number. Both are created by the app.</td></tr>
+        <tr><td>Google Play purchase token, plan type and expiry date</td><td>Confirm with Google Play that your subscription or free trial is active.</td></tr>
+      </tbody>
+    </table></div>
+    <p>Payments are handled entirely by <strong>Google Play</strong>. We never receive your name, card number, billing address or Google account email.</p>
 
-        <h2>2. Use of Android VpnService API</h2>
-        <p>
-            Blue VPN Pro utilizes Android's native <code>VpnService</code> API solely to establish a secure, encrypted WireGuard® tunnel to our global servers (India, Singapore, Germany, and worldwide nodes).
-        </p>
-        <ul>
-            <li>Encrypts outbound and inbound network packets using ChaCha20-Poly1305 authenticated encryption with Curve25519 key exchange.</li>
-            <li>Enforces Fail-Safe Kill Switch protection to block unencrypted leakages when network handoffs happen.</li>
-            <li>Prevents DNS leaks by forcing private DNS routing inside the tunnel.</li>
-            <li><strong>The VpnService is never used to inject ads, capture unencrypted payloads, or monitor your web traffic.</strong></li>
-        </ul>
+    <h3>Devices and sessions</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Data</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>App-generated device ID, device model (for example “motorola edge 70”) and platform</td><td>Let you see and manage the devices using your subscription.</td></tr>
+        <tr><td>Time the device was registered and the time it was last active</td><td>Recognise devices that are no longer in use. Only the latest time is kept; it is overwritten, not added to a history.</td></tr>
+        <tr><td>Server region, tunnel IP address, WireGuard public key and session start time</td><td>Route your encrypted tunnel while you are connected. Deleted when you disconnect, or automatically after a short period without activity.</td></tr>
+      </tbody>
+    </table></div>
 
-        <h2>3. Information We Process</h2>
-        
-        <h3>A. Subscriptions & Billing Data</h3>
-        <p>
-            All subscriptions, monthly renewals, and 7-day free trials are processed directly and securely by <strong>Google Play Billing</strong>. We do not receive, process, or store credit card numbers, payment card details, or banking credentials. A cryptographically hashed purchase token is stored locally on your device via Android KeyStore (AES-256 GCM) solely to confirm active subscription entitlement.
-        </p>
+    <h3>Support messages</h3>
+    <p>If you contact us or use the in-app feedback form, we receive what you choose to send: your email address, the topic and your message. The form also attaches your device model, Android version and app version so we can troubleshoot. Messages from the form are delivered to our support inbox through <strong>FormSubmit</strong> (formsubmit.co). We use this information only to reply to you.</p>
 
-        <h3>B. Installed Apps (Split Tunneling)</h3>
-        <p>
-            When utilizing the Split Tunneling feature, the app queries the local list of installed applications on your device. This list is processed entirely on-device and is never transmitted or uploaded to external servers.
-        </p>
+    <h3>Crash reports</h3>
+    <p>The app contains no analytics or advertising SDKs. If you have chosen to share diagnostics with Google, Google Play may give us anonymous crash reports (device model, Android version and technical error details). These never include network or browsing information.</p>
 
-        <h3>C. Anonymous Crash Diagnostics</h3>
-        <p>
-            Non-identifiable aggregated crash telemetry provided automatically by Android OS (such as OS version and stack traces) may be used to fix application bugs. No network traffic or personal identifiers are contained in these reports.
-        </p>
+    <h2 id="device">3. Data that stays on your device</h2>
+    <ul>
+      <li><strong>Your WireGuard private key</strong> is generated on your device and never leaves it. Only the matching public key is sent to our servers.</li>
+      <li><strong>Settings</strong> (protocol, kill switch, DNS, auto-connect and split-tunnelling choices) are stored locally and encrypted with the Android Keystore.</li>
+      <li><strong>Installed apps:</strong> the split-tunnelling screen reads the list of apps on your device so you can choose which ones use the VPN. This list is never sent anywhere.</li>
+      <li><strong>Wi-Fi state:</strong> if you turn on auto-connect for unsecured Wi-Fi, the app checks the security of the network you join. This check happens only on your device.</li>
+    </ul>
 
-        <h2>4. Multi-Device Protection & Fair Use</h2>
-        <ul>
-            <li><strong>Unlimited Devices:</strong> Subscribers can protect multiple personal devices under their active subscription without artificial device capping.</li>
-            <li><strong>Acceptable Use:</strong> The service is provided strictly for lawful personal security and privacy. Port scanning, botnets, DDoS attacks, or distribution of illicit materials is strictly prohibited.</li>
-        </ul>
+    <h2 id="vpnservice">4. How we use Android’s VpnService</h2>
+    <p>Blue VPN Pro uses Android’s <code>VpnService</code> API for one purpose: to create an encrypted WireGuard tunnel (ChaCha20-Poly1305) between your device and the Blue VPN Pro server you choose. Your DNS queries travel inside that tunnel and are resolved by Cloudflare’s 1.1.1.1 resolver, or by DNS servers you set yourself, which prevents DNS leaks.</p>
+    <p>We never use <code>VpnService</code> to collect personal or sensitive data, inject advertisements, redirect your traffic, build browsing profiles, or sell data.</p>
 
-        <h2>5. Third-Party Services</h2>
-        <ul>
-            <li><strong>Google Play Billing Library:</strong> Exclusively for verifying subscriptions and restoring purchases. For Google's data handling, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
-        </ul>
+    <h2 id="sharing">5. Service providers</h2>
+    <p>We do not sell or rent your information and do not share it with advertisers or data brokers. We use these providers to run the service:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Provider</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td>Google Play</td><td>Processes payments and confirms subscription status. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
+        <tr><td>DigitalOcean</td><td>Hosts our VPN and account servers in India, Singapore and Germany. <a href="https://www.digitalocean.com/legal/privacy-policy">DigitalOcean Privacy Policy</a></td></tr>
+        <tr><td>Cloudflare (1.1.1.1)</td><td>Resolves DNS queries. Queries reach Cloudflare from our server’s IP address, not yours. <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">1.1.1.1 privacy commitment</a></td></tr>
+        <tr><td>FormSubmit</td><td>Delivers messages from the in-app feedback form to our inbox (<a href="https://formsubmit.co">formsubmit.co</a>).</td></tr>
+        <tr><td>Google (Gmail)</td><td>Hosts our support inbox.</td></tr>
+        <tr><td>GitHub Pages</td><td>Hosts this website. GitHub may log visits to these pages.</td></tr>
+      </tbody>
+    </table></div>
+    <p>We may also disclose information if required by law. Because we keep no activity logs, we have no record of anyone’s browsing to disclose.</p>
 
-        <h2>6. Security & Infrastructure Hardening</h2>
-        <ul>
-            <li><strong>Hardware Encryption:</strong> Local preferences and session states are secured using hardware-backed Android Keystore (AES-256 GCM).</li>
-            <li><strong>Server Perimeters:</strong> Nodes operate on hardened Linux kernels with disabled root access, strict UFW firewalls, and Fail2Ban intrusion detection.</li>
-        </ul>
+    <h2 id="legal-bases">6. Legal bases for processing</h2>
+    <p>Where laws such as the EU or UK GDPR apply, we rely on:</p>
+    <ul>
+      <li><strong>Performance of a contract</strong>: account, subscription, device and session data needed to provide the VPN you signed up for;</li>
+      <li><strong>Legitimate interests</strong>: keeping the service secure and preventing abuse;</li>
+      <li><strong>Your request or consent</strong>: replying to support messages you send us.</li>
+    </ul>
 
-        <h2>7. GDPR & CCPA User Rights</h2>
-        <p>
-            Under GDPR, CCPA, and global privacy standards, you have the right to data erasure and privacy verification. Because Blue VPN Pro adheres to a strict zero-logs policy, we do not possess any personal browsing records to disclose, export, or monetize. You can erase local cached application state at any time by clearing application data or uninstalling the app.
-        </p>
+    <h2 id="transfers">7. International transfers</h2>
+    <p>Our servers are in India, Singapore and Germany, and our providers may process data in other countries, including the United States. Where required, we rely on our providers’ standard contractual clauses or similar safeguards.</p>
 
-        <h2>8. Contact & Engineering Team</h2>
-        <div class="contact-box">
-            <p>For questions or inquiries regarding our privacy standards:</p>
-            <p><strong>Team:</strong> Blue VPN Security & Engineering Team</p>
-            <p><strong>Support Email:</strong> <a href="mailto:bluevpnpro.teansupport@gmail.com">bluevpnpro.teansupport@gmail.com</a></p>
-        </div>
-    </article>
-</main>
+    <h2 id="security">8. Security</h2>
+    <ul>
+      <li>All VPN traffic is encrypted end to end between your device and our server using WireGuard.</li>
+      <li>The app talks to our account servers only over HTTPS, and checks each server’s certificate against a key built into the app.</li>
+      <li>App data on your device is encrypted with the Android Keystore.</li>
+      <li>Our servers accept administrator logins by SSH key only, are protected by firewalls, and run the account service with minimal privileges.</li>
+    </ul>
+    <p>No system is perfectly secure, but we work to protect the little data we hold.</p>
 
-<footer>
-    <p>&copy; 2026 Blue VPN Pro. All rights reserved. Zero-Logs Encrypted VPN Service.</p>
+    <h2 id="retention">9. How long we keep data</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Data</th><th>Kept for</th></tr></thead>
+      <tbody>
+        <tr><td>Session data</td><td>Only while you are connected; deleted on disconnect or after a short period without activity.</td></tr>
+        <tr><td>Device records</td><td>Until you remove the device or we delete your account.</td></tr>
+        <tr><td>Account ID and subscription data</td><td>Until you ask us to delete your account.</td></tr>
+        <tr><td>Support messages</td><td>As long as needed to resolve your request, then deleted.</td></tr>
+        <tr><td>Server system logs (security events)</td><td>A few days, and never linked to an account.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 id="rights">10. Your rights and data deletion</h2>
+    <ul>
+      <li><strong>Delete your data:</strong> email <a href="mailto:bluevpnpro.teamsupport@gmail.com?subject=Delete%20my%20Blue%20VPN%20Pro%20data">bluevpnpro.teamsupport@gmail.com</a> with the subject “Delete my data” and your Google Play order number (it starts with “GPA.” and is in your Google Play purchase receipt). We delete your account, devices and subscription records within 30 days. No other identification is needed.</li>
+      <li><strong>Remove local data:</strong> clear the app’s storage or uninstall the app.</li>
+      <li><strong>Cancel your subscription:</strong> at any time in Google Play → Payments &amp; subscriptions → Subscriptions. Deleting your data does not cancel a subscription by itself.</li>
+    </ul>
+    <p>Depending on where you live, for example under the GDPR or California law, you may have the right to access, correct, delete or receive a copy of your data, to object to or restrict processing, and to complain to your local data protection authority. Email us to use any of these rights; we reply within 30 days.</p>
+
+    <h2 id="children">11. Children</h2>
+    <p>Blue VPN Pro is not directed at children under 13, and we do not knowingly collect data from them. If you believe a child has used the service, contact us and we will delete the related data.</p>
+
+    <h2 id="changes">12. Changes to this policy</h2>
+    <p>If we change this policy, we will update the effective date above. For significant changes we will also let you know in the app before they take effect.</p>
+
+    <h2 id="contact">13. Contact</h2>
+    <p>Questions or requests about privacy: <a href="mailto:bluevpnpro.teamsupport@gmail.com">bluevpnpro.teamsupport@gmail.com</a></p>
+    <p>See also our <a href="terms.html">Terms of Service</a>.</p>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>© 2026 Blue VPN Pro</span>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="mailto:bluevpnpro.teamsupport@gmail.com">Contact</a>
+  </div>
 </footer>
-
 </body>
 </html>

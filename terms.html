@@ -1,352 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Blue VPN Pro</title>
-    <meta name="description" content="Terms of Service, acceptable use guidelines, subscription policies, and licensing agreement for Blue VPN Pro.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --primary-light: #3b82f6;
-            --accent: #06b6d4;
-            --bg-dark: #0f172a;
-            --card-bg: #1e293b;
-            --card-border: #334155;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --badge-bg: rgba(37, 99, 235, 0.15);
-            --badge-border: rgba(59, 130, 246, 0.3);
-            --badge-text: #60a5fa;
-            --green: #10b981;
-            --green-bg: rgba(16, 185, 129, 0.12);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.7;
-            padding: 0;
-            margin: 0;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        header {
-            background: linear-gradient(135deg, #0b132b 0%, #1c2541 50%, #0f172a 100%);
-            border-bottom: 1px solid var(--card-border);
-            padding: 2.5rem 1.5rem 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, rgba(0,0,0,0) 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .header-container {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-
-        .brand-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .brand-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #2563eb, #06b6d4);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
-        }
-
-        .brand-icon svg {
-            width: 28px;
-            height: 28px;
-            fill: #ffffff;
-        }
-
-        .brand-title {
-            font-size: 1.6rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: #ffffff;
-        }
-
-        .brand-subtitle {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 0.75rem;
-        }
-
-        .nav-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-
-        .nav-btn.active {
-            background: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        }
-
-        .nav-btn.secondary {
-            background: rgba(255, 255, 255, 0.06);
-            color: var(--text-muted);
-            border: 1px solid var(--card-border);
-        }
-
-        .nav-btn.secondary:hover {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2.5rem auto;
-            padding: 0 1.5rem 4rem;
-        }
-
-        .meta-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .meta-text {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
-
-        .content-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.03em;
-            color: #ffffff;
-        }
-
-        h2 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-top: 2.2rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding-bottom: 0.5rem;
-        }
-
-        p {
-            color: #cbd5e1;
-            margin-bottom: 1.2rem;
-            font-size: 0.975rem;
-        }
-
-        ul, ol {
-            padding-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        li {
-            margin-bottom: 0.75rem;
-            color: #cbd5e1;
-            font-size: 0.975rem;
-        }
-
-        .contact-box {
-            background: #131d31;
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .contact-box a {
-            color: var(--badge-text);
-            text-decoration: none;
-        }
-
-        .contact-box a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--card-border);
-            background: #090e1a;
-        }
-
-        @media (max-width: 640px) {
-            .content-card {
-                padding: 1.5rem;
-            }
-            h1 {
-                font-size: 1.75rem;
-            }
-            .header-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blue VPN Pro Terms</title>
+  <meta name="description" content="The terms for using the Blue VPN Pro app and VPN service.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-    <div class="header-container">
-        <div class="brand-wrapper">
-            <div class="brand-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/>
-                </svg>
-            </div>
-            <div>
-                <div class="brand-title">Blue VPN Pro</div>
-                <div class="brand-subtitle">Legal & Privacy Center</div>
-            </div>
-        </div>
-        <nav class="nav-links">
-            <a href="privacy-policy.html" class="nav-btn secondary">Privacy Policy</a>
-            <a href="terms.html" class="nav-btn active">Terms of Service</a>
-        </nav>
-    </div>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 4 7v8c0 7.4 5.1 13.6 12 15 6.9-1.4 12-7.6 12-15V7z" fill="#1d4ed8"/><path d="m11 16 3.5 3.5L21.5 12" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Blue VPN Pro
+    </a>
+    <nav class="site-nav" aria-label="Legal">
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html" aria-current="page">Terms</a>
+    </nav>
+  </div>
 </header>
 
-<main>
-    <div class="meta-card">
-        <div>
-            <div class="meta-text">Application: <strong>Blue VPN Pro (Android)</strong></div>
-            <div class="meta-text">Last Updated: <strong>October 4, 2026</strong></div>
-        </div>
-        <div class="meta-text">Governing Terms of Service</div>
+<div class="page">
+  <nav class="toc" aria-label="On this page">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#agreement">Agreement</a></li>
+      <li><a href="#eligibility">Eligibility</a></li>
+      <li><a href="#service">The service</a></li>
+      <li><a href="#subscriptions">Subscriptions &amp; trial</a></li>
+      <li><a href="#cancel">Cancellation &amp; refunds</a></li>
+      <li><a href="#acceptable-use">Acceptable use</a></li>
+      <li><a href="#local-laws">Local laws</a></li>
+      <li><a href="#suspension">Suspension</a></li>
+      <li><a href="#ip">Intellectual property</a></li>
+      <li><a href="#disclaimer">Disclaimer</a></li>
+      <li><a href="#liability">Limitation of liability</a></li>
+      <li><a href="#indemnity">Indemnity</a></li>
+      <li><a href="#law">Governing law</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <p class="eyebrow">Legal</p>
+    <h1>Terms of Service</h1>
+    <p class="meta">Effective November 8, 2026</p>
+
+    <div class="callout">
+      <p><strong>In short:</strong> Blue VPN Pro is a monthly subscription sold through Google Play, with a 7-day free trial for eligible new subscribers. You can cancel any time in Google Play. Use the VPN lawfully and don’t use it to harm others. We keep no logs of your online activity.</p>
     </div>
 
-    <article class="content-card">
-        <h1>Terms of Service</h1>
-        <p>
-            Welcome to <strong>Blue VPN Pro</strong>. These Terms of Service ("Terms") govern your access to and use of the Blue VPN Pro Android application, websites, and high-speed encrypted virtual private network infrastructure (collectively, the "Service"), operated by the <strong>Blue VPN Security & Engineering Team</strong> ("Blue VPN Pro", "we", "us", or "our").
-        </p>
-        <p>
-            By downloading, installing, accessing, or using Blue VPN Pro, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our Service.
-        </p>
+    <h2 id="agreement">1. Agreement</h2>
+    <p>These Terms of Service (“Terms”) are an agreement between you and Blue VPN Pro (“we”, “us”) covering your use of the Blue VPN Pro Android app and VPN service (the “Service”). By installing the app or using the Service, you agree to these Terms and to our <a href="privacy-policy.html">Privacy Policy</a>. If you do not agree, do not use the Service.</p>
+    <p>Purchases are also subject to the <a href="https://play.google.com/about/play-terms/">Google Play Terms of Service</a>.</p>
 
-        <h2>1. Description of Service</h2>
-        <p>
-            Blue VPN Pro provides high-speed, encrypted virtual private network connections utilizing the WireGuard® protocol across global secure nodes (including India, Singapore, Germany, and others), designed to protect user privacy, encrypt network traffic, and safeguard connections on public or untrusted Wi-Fi networks.
-        </p>
+    <h2 id="eligibility">2. Eligibility</h2>
+    <p>You must be at least 13 years old to use the Service. If you are under the age of majority where you live, you may use it only with the permission of a parent or guardian, who accepts these Terms on your behalf.</p>
 
-        <h2>2. Multi-Device Licensing & Access</h2>
-        <ul>
-            <li><strong>Personal Use License:</strong> Your active subscription or free trial grants you a personal, non-exclusive, non-transferable license to use Blue VPN Pro across your personal devices.</li>
-            <li><strong>Fair Allocation:</strong> We do not impose artificial device caps for genuine personal use.</li>
-            <li><strong>No Commercial Resale:</strong> You may not rent, lease, sub-license, resell, or distribute VPN access or bandwidth to third parties for commercial gain.</li>
-        </ul>
+    <h2 id="service">3. The service</h2>
+    <ul>
+      <li>The Service creates an encrypted WireGuard® connection between your device and our servers, currently in India, Singapore and Germany. We may add, change or remove server locations.</li>
+      <li>One subscription may be used on the devices registered to it for personal, non-commercial use. Do not resell or share access with people outside your household.</li>
+      <li>Connection speed depends on your network, your device and distance to the server. We do not guarantee any particular speed.</li>
+      <li>We aim to keep the Service available at all times but do not promise uninterrupted access. We may carry out maintenance, which can briefly interrupt connections.</li>
+      <li>A VPN improves privacy but cannot make you anonymous or protect you from every threat, such as malware, phishing, or websites that identify you through your accounts.</li>
+    </ul>
 
-        <h2>3. Acceptable Use Policy (AUP)</h2>
-        <p>Blue VPN Pro is committed to protecting digital freedom and legitimate personal privacy. You agree <strong>NOT</strong> to use our Service to:</p>
-        <ol>
-            <li><strong>Violate Applicable Laws:</strong> Engage in any activity that violates local, national, or international regulations, including copyright infringement or distribution of illicit material.</li>
-            <li><strong>Network Attacks & Abuse:</strong> Conduct port scanning, vulnerability probing, denial-of-service (DoS/DDoS) attacks, botnet orchestration, or packet spoofing.</li>
-            <li><strong>Spam & Malicious Traffic:</strong> Transmit unsolicited mass commercial spam, phishing campaigns, or malware payloads.</li>
-            <li><strong>Infrastructure Interference:</strong> Attempt unauthorized access to our server backends, databases, or cryptographic keys.</li>
-        </ol>
+    <h2 id="subscriptions">4. Subscriptions and free trial</h2>
+    <ul>
+      <li><strong>Plan:</strong> Blue VPN Pro Premium is an auto-renewing monthly subscription. The price, in your local currency and including applicable taxes, is shown in Google Play before you confirm.</li>
+      <li><strong>Free trial:</strong> eligible new subscribers get a 7-day free trial. Google Play decides eligibility; usually one trial per person, and Google may decline a trial for an account, device or payment method that has had one before. If you do not cancel before the trial ends, the paid subscription starts automatically and Google Play charges you.</li>
+      <li><strong>Renewal:</strong> your subscription renews every month at the then-current price until you cancel. Google Play charges your payment method at the start of each period.</li>
+      <li><strong>Price changes:</strong> if the price changes, Google Play will notify you in advance and, where required, ask for your consent before charging the new price.</li>
+      <li><strong>Payment:</strong> all payments are processed by Google Play. We never see or store your payment details.</li>
+    </ul>
 
-        <h2>4. Zero-Logs Commitment</h2>
-        <p>
-            Blue VPN Pro operates under a strict, verifiable <strong>No-Logs Policy</strong>. We do not monitor, record, store, or share your internet traffic, visited domains, DNS queries, or originating IP addresses. Server daemons execute in volatile RAM without disk logging.
-        </p>
+    <h2 id="cancel">5. Cancellation and refunds</h2>
+    <ul>
+      <li>You can cancel at any time in Google Play → Payments &amp; subscriptions → Subscriptions → Blue VPN Pro. Uninstalling the app does <strong>not</strong> cancel your subscription.</li>
+      <li>If you cancel during the free trial, you will not be charged. If you cancel a paid subscription, you keep access until the end of the period you have already paid for, and it will not renew.</li>
+      <li>Refunds are handled under <a href="https://support.google.com/googleplay/answer/2479637">Google Play’s refund policy</a>. You can also email us; we review refund requests case by case. This does not affect any rights you have under consumer law.</li>
+    </ul>
 
-        <h2>5. In-App Subscriptions & Free Trials</h2>
-        <ul>
-            <li><strong>Google Play Billing:</strong> All financial transactions, monthly recurring subscriptions, and 7-day free trials are managed and processed securely through Google Play Billing.</li>
-            <li><strong>Free Trial:</strong> Eligible new users can activate a 7-day free trial. If not canceled before the trial period concludes, the subscription automatically renews at the designated monthly rate via Google Play.</li>
-            <li><strong>Cancellations & Refunds:</strong> You can cancel recurring subscriptions at any time directly in Google Play Store (<code>Play Store -> Profile -> Payments & Subscriptions -> Subscriptions</code>). Refunds are handled per Google Play's standard policies.</li>
-        </ul>
+    <h2 id="acceptable-use">6. Acceptable use</h2>
+    <p>You agree not to use the Service to:</p>
+    <ul>
+      <li>break any law, or help anyone else do so;</li>
+      <li>access, store or share child sexual abuse material, or content that promotes terrorism or violence;</li>
+      <li>send spam, run phishing or fraud schemes, or impersonate others;</li>
+      <li>attack, scan, probe or disrupt any network or system, including denial-of-service attacks, hacking or spreading malware;</li>
+      <li>infringe copyrights, trademarks or other intellectual property rights;</li>
+      <li>harass, threaten or stalk anyone;</li>
+      <li>overload our servers, interfere with other users, or try to bypass device, subscription or security checks;</li>
+      <li>copy, modify, reverse-engineer or resell the app or Service, except where the law allows it.</li>
+    </ul>
 
-        <h2>6. Disclaimer of Warranties</h2>
-        <p>
-            The Service is provided on an "AS IS" and "AS AVAILABLE" basis. While we strive to maintain 99.9% uptime and low-latency throughput across all server nodes, Blue VPN Pro does not guarantee that the Service will be uninterrupted, error-free, or unaffected by regional ISP restrictions or third-party blocks.
-        </p>
+    <h2 id="local-laws">7. Local laws</h2>
+    <p>VPN use is restricted or regulated in some countries. You are responsible for making sure your use of the Service is legal where you are. Using a VPN to commit an act that is illegal in your country remains your responsibility.</p>
 
-        <h2>7. Limitation of Liability</h2>
-        <p>
-            To the maximum extent permitted by applicable law, Blue VPN Pro and its engineering team shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the Service.
-        </p>
+    <h2 id="suspension">8. Suspension and termination</h2>
+    <p>We may suspend or end your access if you seriously or repeatedly break these Terms, if needed to protect the Service or other users, or if required by law. Where reasonable, we will tell you first. Because we keep no activity logs, we act on abuse reports and our own technical checks, not on monitoring of what you do online.</p>
+    <p>You may stop using the Service at any time by cancelling your subscription and uninstalling the app. If we discontinue the Service entirely, we will give reasonable notice and refund any prepaid period you could not use.</p>
 
-        <h2>8. Contact Information</h2>
-        <div class="contact-box">
-            <p>If you have questions regarding these Terms of Service:</p>
-            <p><strong>Team:</strong> Blue VPN Security & Engineering Team</p>
-            <p><strong>Support Email:</strong> <a href="mailto:bluevpnpro.teamsupport@gmail.com">bluevpnpro.teamsupport@gmail.com</a></p>
-        </div>
-    </article>
-</main>
+    <h2 id="ip">9. Intellectual property</h2>
+    <p>The app, its design, name and logo belong to us or our licensors. We grant you a personal, non-exclusive, non-transferable licence to use the app on your devices while you follow these Terms. WireGuard is a registered trademark of Jason A. Donenfeld. Open-source components in the app are licensed under their own terms.</p>
 
-<footer>
-    <p>&copy; 2026 Blue VPN Pro. All rights reserved. Zero-Logs Encrypted VPN Service.</p>
+    <h2 id="disclaimer">10. Disclaimer</h2>
+    <p>To the extent the law allows, the Service is provided “as is” and “as available”, without warranties of any kind, including fitness for a particular purpose, availability or error-free operation. Some countries do not allow these exclusions, so they may not all apply to you.</p>
+
+    <h2 id="liability">11. Limitation of liability</h2>
+    <p>To the extent the law allows, we are not liable for indirect, incidental, special or consequential losses, such as lost profits or data, arising from your use of, or inability to use, the Service. Our total liability for any claim relating to the Service is limited to the amount you paid us for the Service in the 12 months before the claim.</p>
+    <p>Nothing in these Terms limits liability that cannot be limited by law, such as for fraud, or for death or personal injury caused by negligence, or your statutory rights as a consumer.</p>
+
+    <h2 id="indemnity">12. Indemnity</h2>
+    <p>If you use the Service in breach of these Terms or the law, and this leads to a claim against us, you agree to cover our reasonable costs and losses from that claim, to the extent the law allows.</p>
+
+    <h2 id="law">13. Governing law and disputes</h2>
+    <p>These Terms are governed by the laws of the United Arab Emirates. If you have a problem, please contact us first; most issues can be solved quickly by email. If a dispute cannot be resolved, it will be handled by the competent courts of the United Arab Emirates. If you are a consumer, you also keep the protection of the mandatory laws of the country where you live and may bring a claim in your local courts.</p>
+
+    <h2 id="changes">14. Changes to these Terms</h2>
+    <p>We may update these Terms from time to time. We will change the effective date above and, for significant changes, let you know in the app before they take effect. If you keep using the Service after changes take effect, you accept the updated Terms. If you do not agree, cancel your subscription.</p>
+    <p>If any part of these Terms cannot be enforced, the rest remains in effect.</p>
+
+    <h2 id="contact">15. Contact</h2>
+    <p>Questions about these Terms: <a href="mailto:bluevpnpro.teamsupport@gmail.com">bluevpnpro.teamsupport@gmail.com</a></p>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="inner">
+    <span>© 2026 Blue VPN Pro</span>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="mailto:bluevpnpro.teamsupport@gmail.com">Contact</a>
+  </div>
 </footer>
-
 </body>
 </html>
