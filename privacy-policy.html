@@ -77,7 +77,7 @@
       <li>your originating IP address together with your VPN activity;</li>
       <li>a history of your connections, session times or the amount of data you transfer.</li>
     </ul>
-    <p>Our account server runs with request logging turned off, and the HTTPS proxy in front of it has access logging disabled. While you are connected, the VPN server necessarily holds your current IP address in memory so that it can send traffic back to you. It is discarded when your session ends and is never written to a log.</p>
+    <p>Our account server runs with request logging turned off, and the HTTPS proxy in front of it has access logging disabled. To stop abuse, the servers keep short-lived counters of recent requests in memory, keyed by a scrambled (salted hash) form of the IP address. These counters are never written to disk and are gone within an hour. While you are connected, the VPN server necessarily holds your current IP address in memory so that it can send traffic back to you. It is discarded when your session ends and is never written to a log.</p>
 
     <h2 id="collect">2. Data we process</h2>
     <p>To run a paid service, we keep a small amount of account and device information. None of it is linked to what you do online.</p>
@@ -86,7 +86,7 @@
     <div class="table-wrap"><table>
       <thead><tr><th>Data</th><th>Why</th></tr></thead>
       <tbody>
-        <tr><td>Random account ID (for example “BVP-1234567”) and a secret access token</td><td>Identify your subscription without using your name, email or phone number. Both are created by the app.</td></tr>
+        <tr><td>Random account ID (for example “BVP-7KQ2MZ4XRT9HWB3D”) and a secret access token</td><td>Identify your subscription without using your name, email or phone number. Both are created by the app.</td></tr>
         <tr><td>Google Play purchase token, plan type and expiry date</td><td>Confirm with Google Play that your subscription or free trial is active.</td></tr>
       </tbody>
     </table></div>
